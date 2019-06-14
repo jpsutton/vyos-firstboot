@@ -24,7 +24,7 @@ function find_iso9660_dev {
 }
 
 # Attempt to extract vyosinit.cfg from the first detected CD/DVD device
-python3 /usr/bin/firstbootcfg.py $(find_iso9660_dev)
+python3 /usr/bin/vyos-firstboot.py $(find_iso9660_dev)
 
 # If anything was found, it will be dropped in /tmp/vyos-firstboot.cfg
 if [ -f "$FIRST_BOOT_FILE" ]; then
