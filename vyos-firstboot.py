@@ -48,6 +48,7 @@ def main():
                         print("Extracting first boot config...")
                         iso_path = dr.file_identifier().decode()
                         iso.get_file_from_iso_fp(dest_file, iso_path=("/%s" % iso_path))
+                        break
             else:
                 sys.stderr.write("WARN: Unable to locate first boot configuration file.\n")
                 sys.exit(-2)
