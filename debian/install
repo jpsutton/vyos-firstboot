@@ -1,0 +1,3 @@
+vyos-firstboot.sh usr/bin
+vyos-firstboot.py usr/bin
+vyos-firstboot.service lib/systemd/system

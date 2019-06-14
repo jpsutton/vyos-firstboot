@@ -1,0 +1,15 @@
+Source: vyos-firstboot
+Section: contrib/net
+Priority: optional
+Maintainer: Jared Sutton <jpsutton@gmail.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.9.8
+Homepage: https://github.com/jpsutton/vyos-firstboot
+#Vcs-Git: https://anonscm.debian.org/collab-maint/vyos-firstboot.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/vyos-firstboot.git
+
+Package: vyos-firstboot
+Architecture: all
+Depends: ${misc:Depends}
+Description: First boot service for VyOS
+ vyos-firstboot looks for an attached CD/DVD volume, and searches the volume for a VyOS configuration file to use on the first boot

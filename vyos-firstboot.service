@@ -1,0 +1,17 @@
+[Unit]
+Description=VyOS First Boot Configuration
+After=vyos-router.service
+Conflicts=shutdown.target
+Before=systemd-user-sessions.service
+
+[Service]
+Type=oneshot
+Restart=no
+TimeoutSec=1min
+KillMode=process
+RemainAfterExit=yes
+ExecStart=/usr/bin/vyos-firstboot.sh
+StandardOutput=journal+console
+
+[Install]
+WantedBy=vyos.target

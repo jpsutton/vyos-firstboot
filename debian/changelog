@@ -1,0 +1,5 @@
+vyos-firstboot (0.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Jared Sutton <jpsutton@gmail.com>  Fri, 14 Jun 2019 14:46:03 +0000
