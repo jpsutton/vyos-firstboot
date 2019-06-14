@@ -1,6 +1,5 @@
 #!/bin/vbash
 
-CUR_DIR="$( cd "$( dirname "$0" )" && pwd )"
 RUN_FLAG="/config/.firstboot-done"
 FIRST_BOOT_FILE="/tmp/vyos-firstboot.cfg"
 
@@ -12,9 +11,6 @@ fi
 
 # Template for vyos scripts
 source /opt/vyatta/etc/functions/script-template
-
-# Move into the script directory
-cd "$CUR_DIR"
 
 function find_iso9660_dev {
   for blkdev in $(ls /dev/block); do
@@ -28,7 +24,7 @@ function find_iso9660_dev {
 }
 
 # Attempt to extract vyosinit.cfg from the first detected CD/DVD device
-python3 firstbootcfg.py $(find_iso9660_dev)
+python3 /usr/bin/firstbootcfg.py $(find_iso9660_dev)
 
 # If anything was found, it will be dropped in /tmp/vyos-firstboot.cfg
 if [ -f "$FIRST_BOOT_FILE" ]; then
